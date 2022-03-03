@@ -22,7 +22,7 @@ Using EBNF (Extended Backus-Naur Form) as in USE
     I used textX for metamodeling:
         https://github.com/textX/textX
 
-    Also I look into USE (specification language) to copy follow UML syntax:
+    Also I look into UML-based Specification Environment (USE) to copy follow UML syntax:
         https://github.com/useocl/use
     
     By doing that I end up using EBNF:
