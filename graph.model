@@ -1,0 +1,11 @@
+model Graph
+
+class Node
+operations
+  newTarget()
+end
+
+association Edge between
+  Node[*] role source
+  Node[*] role target
+end

@@ -1,0 +1,25 @@
+model Cars
+
+-- classes
+
+class Car
+attributes
+    brand: String
+    color: String
+operations
+    increaseMileage(kilometers: Integer)        
+end
+
+class Person
+attributes
+    name: String
+    age: Integer
+end
+
+
+-- associations
+
+association Owner between
+    Person[1] role hasA
+    Car[0..1] role isOwnedBy
+end

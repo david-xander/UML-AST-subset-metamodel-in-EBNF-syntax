@@ -1,0 +1,56 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+4385386608 -> 4385389152 [label="classes:0" arrowtail=diamond dir=both]
+4385389152 -> 4385389104 [label="attributes" arrowtail=diamond dir=both]
+4385389104 -> 4385388048 [label="attribute:0" arrowtail=diamond dir=both]
+4385388048[label="{name:Attribute|+type:str='String'\l}"]
+4385389104 -> 4385389392 [label="attribute:1" arrowtail=diamond dir=both]
+4385389392[label="{age:Attribute|+type:str='Integer'\l}"]
+4385389104 -> 4385389488 [label="attribute:2" arrowtail=diamond dir=both]
+4385389488[label="{salary:Attribute|+type:str='Real'\l}"]
+4385389104[label="{:Attributes|}"]
+4385389152 -> 4385387712 [label="operations" arrowtail=diamond dir=both]
+4385387712 -> 4385388960 [label="operation:0" arrowtail=diamond dir=both]
+4385388960 -> 4385261600 [label="variables:0" arrowtail=diamond dir=both]
+4385261600[label="{rate:Variable|+type:str='Real'\l}"]
+4385388960[label="{raiseSalary:Operation|+returnType:str='Real'\l}"]
+4385387712[label="{:Operations|}"]
+4385389152[label="{Person:UMLClass|}"]
+4385386608 -> 4385387952 [label="classes:1" arrowtail=diamond dir=both]
+4385387952 -> 4385388480 [label="attributes" arrowtail=diamond dir=both]
+4385388480 -> 4385370368 [label="attribute:0" arrowtail=diamond dir=both]
+4385370368[label="{name:Attribute|+type:str='String'\l}"]
+4385388480 -> 4385373488 [label="attribute:1" arrowtail=diamond dir=both]
+4385373488[label="{location:Attribute|+type:str='String'\l}"]
+4385388480[label="{:Attributes|}"]
+4385387952 -> 4385388432 [label="operations" arrowtail=diamond dir=both]
+4385388432 -> 4385373632 [label="operation:0" arrowtail=diamond dir=both]
+4385373632 -> 4385372192 [label="variables:0" arrowtail=diamond dir=both]
+4385372192[label="{p:Variable|+type:str='Person'\l}"]
+4385373632[label="{hire:Operation|}"]
+4385388432 -> 4385373248 [label="operation:1" arrowtail=diamond dir=both]
+4385373248 -> 4385372624 [label="variables:0" arrowtail=diamond dir=both]
+4385372624[label="{p:Variable|+type:str='Person'\l}"]
+4385373248[label="{fire:Operation|}"]
+4385388432[label="{:Operations|}"]
+4385387952[label="{Company:UMLClass|}"]
+4385386608 -> 4385387280 [label="associations:0" arrowtail=diamond dir=both]
+4385387280 -> 4385372576 [label="associate:0" arrowtail=diamond dir=both]
+4385372576[label="{Person:Associate|+multiplicity:str='*'\l+role:str='employee'\l}"]
+4385387280 -> 4385370752 [label="associate:1" arrowtail=diamond dir=both]
+4385370752[label="{Company:Associate|+multiplicity:str='0..1'\l+role:str='employer'\l}"]
+4385387280[label="{WorksFor:UMLAssociation|}"]
+4385386608[label="{:UMLModel|+model:str='Employee'\lcompositions:list=[]\l}"]
+
+}

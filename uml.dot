@@ -1,0 +1,62 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+140248361581840[ label="{UMLModel|model: ID\l}"]
+
+140248364447616[ label="{UMLClass|type: ClassType\lname: ID\l}"]
+
+140248364440592[ label="{Attributes|}"]
+
+140248364454432[ label="{Attribute|name: ID\ltype: Primitive\l}"]
+
+140248364457840[ label="{Operations|}"]
+
+140248364461248[ label="{Operation|name: ID\lreturnType: Primitive\l}"]
+
+140248364465232[ label="{Variable|name: ID\ltype: Primitive\l}"]
+
+140248629778400[ label="{UMLAssociation|name: ID\l}"]
+
+140248629739568[ label="{UMLComposition|name: ID\l}"]
+
+140248629733776[ label="{Associate|name: ID\lmultiplicity: Multiplicity\lrole: ID\l}"]
+
+
+
+140248361581840 -> 140248364447616[arrowtail=diamond, dir=both, headlabel="classes 1..*"]
+140248361581840 -> 140248629778400[arrowtail=diamond, dir=both, headlabel="associations 0..*"]
+140248361581840 -> 140248629739568[arrowtail=diamond, dir=both, headlabel="compositions 0..*"]
+140248364447616 -> 140248364440592[arrowtail=diamond, dir=both, headlabel="attributes "]
+140248364447616 -> 140248364457840[arrowtail=diamond, dir=both, headlabel="operations "]
+140248364440592 -> 140248364454432[arrowtail=diamond, dir=both, headlabel="attribute 1..*"]
+140248364457840 -> 140248364461248[arrowtail=diamond, dir=both, headlabel="operation 0..*"]
+140248364461248 -> 140248364465232[arrowtail=diamond, dir=both, headlabel="variables 0..*"]
+140248629778400 -> 140248629733776[arrowtail=diamond, dir=both, headlabel="associate 1..*"]
+140248629739568 -> 140248629733776[arrowtail=diamond, dir=both, headlabel="composition 1..*"]
+match_rules [ shape=plaintext, label=< <table>
+	<tr>
+		<td><b>Multiplicity</b></td><td>MultiplicityValue .. MultiplicityValue?</td>
+	</tr>
+	<tr>
+		<td><b>MultiplicityValue</b></td><td>\d+|*</td>
+	</tr>
+	<tr>
+		<td><b>ClassType</b></td><td>abstract|interface|enum</td>
+	</tr>
+	<tr>
+		<td><b>Primitive</b></td><td>String|Integer|Boolean|Float|Real|ID</td>
+	</tr>
+</table> >]
+
+
+}

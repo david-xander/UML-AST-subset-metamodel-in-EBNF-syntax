@@ -1,0 +1,28 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+4561069536 -> 4561071072 [label="classes:0" arrowtail=diamond dir=both]
+4561071072 -> 4561070880 [label="operations" arrowtail=diamond dir=both]
+4561070880 -> 4561070400 [label="operation:0" arrowtail=diamond dir=both]
+4561070400[label="{newTarget:Operation|variables:list=[]\l}"]
+4561070880[label="{:Operations|}"]
+4561071072[label="{Node:UMLClass|}"]
+4561069536 -> 4561070832 [label="associations:0" arrowtail=diamond dir=both]
+4561070832 -> 4561069776 [label="associate:0" arrowtail=diamond dir=both]
+4561069776[label="{Node:Associate|+multiplicity:str='*'\l+role:str='source'\l}"]
+4561070832 -> 4560955856 [label="associate:1" arrowtail=diamond dir=both]
+4560955856[label="{Node:Associate|+multiplicity:str='*'\l+role:str='target'\l}"]
+4561070832[label="{Edge:UMLAssociation|}"]
+4561069536[label="{:UMLModel|+model:str='Graph'\lcompositions:list=[]\l}"]
+
+}

@@ -1,0 +1,3 @@
+Primitive:
+    "String" | "Integer" | "Boolean" | "Float" | "Real" | ID
+;

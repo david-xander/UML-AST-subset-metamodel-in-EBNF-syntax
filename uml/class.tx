@@ -1,0 +1,35 @@
+import primitives
+
+UMLClass:
+    (type = ClassType)? 
+    "class" name=ID
+    (attributes=Attributes)?
+    (operations=Operations)?
+    "end"
+;
+
+ClassType:
+    "abstract" | "interface" | "enum"
+;
+
+Attributes:
+    "attributes"
+        attribute+=Attribute
+;
+
+Attribute:
+    name=ID ":" type=Primitive
+;
+
+Operations:
+    "operations"
+        operation*=Operation
+;
+
+Operation:
+    name=ID "(" (variables*=Variable)* ")" ( ":" returnType=Primitive )?
+;
+
+Variable:
+    name=ID ":" type=Primitive
+;

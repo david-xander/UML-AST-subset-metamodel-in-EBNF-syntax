@@ -1,0 +1,23 @@
+UMLAssociation:
+    "association" name=ID "between"
+    associate+=Associate
+    "end"
+;
+
+UMLComposition:
+    "composition" name=ID "between"
+    composition+=Associate
+    "end"
+;
+
+Associate:
+    name=ID "[" multiplicity=Multiplicity "]" ("role" role=ID)?
+;
+
+Multiplicity:
+    MultiplicityValue (".." MultiplicityValue)?
+;
+
+MultiplicityValue:
+    /\d+/ | "*"
+;

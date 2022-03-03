@@ -1,0 +1,14 @@
+import uml.class
+import uml.association
+
+
+UMLModel:
+    "model" model=ID
+    classes+=UMLClass
+    associations*=UMLAssociation
+    compositions*=UMLComposition
+;
+
+Comment:
+  /\-\-.*$/
+;
